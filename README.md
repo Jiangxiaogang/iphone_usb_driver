@@ -1,10 +1,16 @@
 # 是什么？
   这是从windows版iTunes提取出来的iphone设备驱动。有了这个驱动就能使用iphone的usb热点功能。不用安装完整的iTunes软件。
+  提取的方法可以阅读我的博客：https://blog.csdn.net/qq446252221/article/details/89712297
   
 # 为什么？
   在电脑没有WiFi、没有网络、没有安装iTunes、有一台iphone、有一条usb数据线的情况下，想通过iphone上网，或者把iphone上的文件拷贝到电脑。
  
 # 怎么做？
+  因为电脑没有USB驱动，而我们又要给它安装驱动，所以通过一种特别的方法把驱动程序放到手机上：那就是把它伪装为一张图片！
+  我准备了一张jpg图片和USB驱动的压缩包，使用“copy /b image.jpg+usbaapl.7z usbaapl.jpg”命令生成一张带有压缩包的图片。
+  然后把这张图片保存到手机相册，就能通过电脑读取到这张图片，然后解压得到USB设备驱动！
+  
+# 怎么用？
   1. 把usbaapl.jpg下载到手机相册；
   2. 用usb数据线连接iphone到电脑；
   3. 电脑上会出现"Apple iPhone 便捷式设备"，在这个设备里找到刚才下载的照片，并把它拷贝到电脑；
@@ -23,6 +29,9 @@
     
     
 # 使用USB热点传文件？
-需要在iphone安装一个APP，推荐使用MFiles，这个APP可以在手机上建立HTTP服务器，然后通过电脑浏览器访问手机的文件，十分方便！
-下载地址：https://apps.apple.com/cn/app/mfiles-lite-%E6%9B%B4%E8%BD%BB%E6%9B%B4%E7%AE%80%E6%9B%B4%E6%98%93%E7%94%A8/id1480197468
+  开启USB热点功能后，电脑和手机就组建了一个局域网，就可以进行文件传输了。
+  当然你也可以利用USB热点在电脑上下载完整的iTunes软件进行文件传输。
+  不过我推荐另一种办法：
+  需要在iphone安装一个APP，这个APP叫做MFiles，它可以在手机上建立HTTP服务器，然后通过电脑浏览器访问手机的文件，十分方便！
+  下载地址：https://apps.apple.com/cn/app/id1480197468
 
